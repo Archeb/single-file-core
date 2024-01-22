@@ -118,7 +118,6 @@ async function getPageData(options = {}, initOptions, doc = globalThis.document,
 			password: options.password,
 			zipScript: options.zipScript
 		});
-		delete pageData.resources;
 		const reader = new globalThis.FileReader();
 		reader.readAsArrayBuffer(blob);
 		const arrayBuffer = await new Promise((resolve, reject) => {
